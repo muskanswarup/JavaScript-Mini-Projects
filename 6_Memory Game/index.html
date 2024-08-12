@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Game with Anime</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container text-center">
+        <h1>Memory Game</h1>
+
+        <div class="score-board d-flex justify-content-between">
+            <div class="stopwatch">00:00:00</div>
+            <div class="score" id="finalScore">Score 0</div>
+        </div>
+
+        <div class="tiles row justify-content-center">
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/1_goku.webp" alt="Goku" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/2_makise.webp" alt="Makise" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/3_rentAGF_Chiruzu.webp" alt="Chizuru" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/4_lightAndRyuk.webp" alt="Light and Ryuk" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/5_leviAckerman.webp" alt="Levi Ackerman" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/6_lelouch.webp" alt="Lelouch" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/7_suzaku.webp" alt="Suzaku" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/8_kakashi.webp" alt="Kakashi" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/9_gojo.webp" alt="Gojo" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/10_durarara.jpg" alt="Durarara" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/1_goku.webp" alt="Goku" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/2_makise.webp" alt="Makise" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/3_rentAGF_Chiruzu.webp" alt="Chizuru" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/4_lightAndRyuk.webp" alt="Light and Ryuk" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/5_leviAckerman.webp" alt="Levi Ackerman" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/6_lelouch.webp" alt="Lelouch" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/7_suzaku.webp" alt="Suzaku" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/8_kakashi.webp" alt="Kakashi" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/9_gojo.webp" alt="Gojo" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-3 col-lg-2 tile">
+                <div class="card">
+                    <img src="./Front-Face-Images/10_durarara.jpg" alt="Durarara" class="front-face">
+                    <img src="BackSide.avif" alt="Card Back" class="back-face">
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons d-flex justify-content-center">
+            <button type="reset" id="restart" class="btn btn-warning m-2">RESTART</button>
+            <button type="button" id="pause" class="btn btn-primary m-2">PAUSE</button>
+        </div>
+
+    </div>
+
+
+    <!-- Modal for final score -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" role="dialog" aria-labelledby="scoreModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="scoreModalLabel">Game Over</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p id="finalScore"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html> 
+

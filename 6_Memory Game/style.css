@@ -1,0 +1,152 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: bisque;
+    font-family: Arial, sans-serif;
+    color: #2f2963;
+}
+
+.container{
+    text-align: center;
+}
+
+h1{
+    color: palevioletred;
+    margin: 2.5rem 0 ;
+    text-shadow: 2px 2px 1px #FF0000;
+}
+
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(5,160px);
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.tile{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    perspective: 1000px;
+}
+
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+img{
+    object-fit: contain;
+}
+
+.front-face, .back-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg);
+}
+
+.back-face {
+    background-color: #f8f8f8;
+    border: 1px solid palevioletred;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.score-board{
+    display: flex;
+    width: 100%;
+    font-size: 2rem;
+}
+
+.stopwatch{
+    flex-grow: 1;
+}
+
+.score{
+    margin-left: auto;
+}
+
+.buttons{
+    margin-top: 2rem;
+}
+
+button{
+    margin: 2rem 1.5rem;
+    width: 13rem;
+    height: 3rem;
+    background-color: #ef946c;
+    border: none;
+    outline: none;
+    color: #2F2963;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 0.5rem;
+
+}
+
+button:hover{
+    background-color: #454372;
+    color: burlywood;
+}
+
+/*  Responsive */
+
+/* Ensure that the game board is responsive */
+.game-board .col-6 {
+    padding: 5px;
+}
+
+@media (min-width: 576px) {
+    .game-board .col-6 {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 768px) {
+    .game-board .col-sm-4 {
+        max-width: 33.3333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .game-board .col-md-3 {
+        max-width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .game-board .col-lg-2 {
+        max-width: 16.6667%;
+    }
+}
