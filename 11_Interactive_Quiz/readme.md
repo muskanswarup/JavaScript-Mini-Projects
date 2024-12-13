@@ -73,8 +73,3 @@ This project is licensed under the MIT License.
 
 Feel free to suggest additional features, report bugs, or improve the existing functionality by opening an issue or submitting a pull request!
 
-
-/////// For me
-
-1. Buttons hover, image hover-scale
-2. Progress bar appears slowly first then image, followed by text.
