@@ -1,0 +1,93 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("images/homo-studio-iCyEPaLdPAs-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+#top-moving-line {
+  position: absolute;
+  border: 1px solid sandybrown;
+  background: linear-gradient(to right, sandybrown, gold);
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  animation: slideRight 5s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(300px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+#light-bulb {
+  position:absolute;
+  top: 17%;
+  left: 15%;
+  width: 4.375;
+  height: 4.375rem;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce{
+  0%,100%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(10%);
+  }
+}
+
+#qa-image{
+  position: absolute;
+  top:20%;
+  right:10%;
+  width: 5.5rem;
+  height: 5.5rem;
+  animation: upDown 2s infinite ease-in-out;
+}
+
+
+@keyframes upDown{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+#quiz-text{
+  position: relative;
+  /* color: orange; */
+  background: -webkit-linear-gradient(orange, rgb(42, 161, 197));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  top: 20%;
+  left: 30%;
+  font-size:3em; 
+  
+}
