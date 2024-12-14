@@ -1,0 +1,174 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f1e3;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  background-color: bisque;
+  border: 1px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+}
+
+.quiz-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: relative;
+}
+
+.left-side {
+  position: relative;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#monitor-screen {
+  width: 80%;
+  height: auto;
+  z-index: 1;
+  animation: float 3s infinite ease-in-out, rotate 5s infinite ease-in-out;
+}
+
+#monitor-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #2c3e50;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.right-side {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0.25rem;
+  align-items: left;
+}
+
+.right-side img {
+  width: 70%;
+  height: auto;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .quiz-box {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+    padding: 2%;
+  }
+
+  .left-side,
+  .right-side {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+  }
+
+  #monitor-screen {
+    width: 90%;
+  }
+
+  #monitor-text {
+    font-size: 1.2rem;
+  }
+
+  .right-side img {
+    width: 50%;
+  }
+}
+
+
+.pencil-wrapper {
+  position: relative;
+  width: 70%; /* Adjust to control image size */
+  text-align: center;
+  animation: bounceRotate 3s infinite ease-in-out; /* Add animation to pencils */
+}
+
+.pencil-wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+.pencil-wrapper .pencil-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Subtle text shadow for readability */
+  pointer-events: none; /* Prevent interference with image clicks */
+}
+
+/* Keyframes for pencil animation */
+@keyframes bounceRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-10px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(0) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+}

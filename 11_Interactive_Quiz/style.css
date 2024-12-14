@@ -188,7 +188,7 @@ body {
   bottom: 23%;
   left: 40%;
   transform: translateX(-50%);
-  width: 12rem;
+  width: 10rem;
   height: 4rem;
   background-color: #ff8c00;
   color: #fff;
@@ -200,6 +200,11 @@ body {
   text-align: center;
   transition: all 0.3s ease-in-out;
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#play-btn a{
+  text-decoration: none;
+  color: #fff;
 }
 
 #play-btn:hover {
