@@ -9,7 +9,11 @@ A simple web application that allows users to change the background color of the
 - **Error Alerts**: Displays an error message if the input is invalid.
 - **Interactive Button**: Button styling dynamically adjusts based on the validity of the input.
 
-## Demo
+## Live Demo
+
+The project is live! Check it out here: [Hex Color Background Changer](https://hex-color-background-change.vercel.app/)
+
+## Screenshots
 
 ![Hex_color_bg_change](https://github.com/user-attachments/assets/af5f464e-b1cf-4e5d-9a08-bfdfd533500b)
 
