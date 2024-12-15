@@ -8,47 +8,31 @@ nextQuoteBtn.addEventListener("click" , ()=>{
     // toggleColor();
 })
 
-let quotes = [
-    {
-        quote: "Never argue with stupid people, they will only drag you down to their level and beat you with experience.",
-        source: "Mark Twain"
-    },
-    {
-        quote: "Life has no limitations except the ones you make.",
-        source: "Les Brown"
-    },
-    {
-        quote: "No other animal knows the difference between Friday and Monday.",
-        source: "Anonymous"
-    },
-    {
-        quote: "People build too many walls and not enough bridges.",
-        source: "Anonymous"
-    },
-    {
-        quote: "Things happen in life that you can’t stop, but that doesn’t mean you should shut out the world.",
-        source: "Now And Then"
-    },
-    {
-        quote: "You don’t need bigger boobs. You Need to read better books.",
-        source: "Mom"
-    },
-    {
-        quote: "You can’t change how people treat you or what they say about you. All you can do is change how you react to it.",
-        source: "Anonymous"
+
+async function fetchQuote(){
+    try{
+        let response = await fetch("https://api.quotable.io/random");
+
+        if(!response.ok){
+            throw new Error("Failed to fetch quote");
+        }
+
+        let data = await response.json();
+        console.log(data);
+
+        displayQuote(data.content , data.author);
+        toggleColor();
+
+    }catch(error){
+        console.log(error);
+        quoteContainer.innerHTML = "Oops! Failed to load quote. Try again later."
     }
-]
-
-
-let generateQuote = ()=>{
-    let length = quotes.length;
-    let randomQuoteIndex =  Math.floor(Math.random() * length);
-    console.log(quotes[randomQuoteIndex]);
-    let randomQuote = quotes[randomQuoteIndex];
-    toggleColor();
-
-    quoteContainer.innerHTML = `"${randomQuote.quote}"<br>~ ${randomQuote.source}`;
 }
+
+function displayQuote(quote, author){
+    quoteContainer.innerHTML = `"${quote}"<br><br> ~${author}`;
+}
+
 
 let toggleColor = () => {
     let colors = [
@@ -70,4 +54,6 @@ let toggleColor = () => {
     body.style.backgroundColor = bgColor;
 }
 
-setTimeout(generateQuote , 10000);
+nextQuoteBtn.addEventListener("click" , fetchQuote);
+
+fetchQuote();
