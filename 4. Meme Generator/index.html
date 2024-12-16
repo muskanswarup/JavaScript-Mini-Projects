@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meme Generator with Text Overlay</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>Meme Generator</h1>
+
+    
+    <div id="container">
+
+        <!-- Left side div for canvas aka meme -->
+        <div id="left-side">
+          <canvas id="meme">Sorry your browser does not support canvas.</canvas>
+        </div>
+        <!-- Right side div for meme info -->
+        <div id="right-side">
+          <label for="meme-image">Select an image</label>
+          <input type="file" id="imageFileInput" />
+
+          <label for="top-text">Top Text</label>
+          <input type="text" id="top-text" />
+
+          <label for="bottom-text">Bottom Text</label>
+          <input type="text" id="bottom-text" />
+
+          <button id="button">Generate</button>
+        </div>
+     
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

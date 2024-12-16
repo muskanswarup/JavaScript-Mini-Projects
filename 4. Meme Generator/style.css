@@ -1,0 +1,100 @@
+*,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to left, #BCCCDC, #F8FAFC) ;
+
+}
+
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 2.5rem;
+    color: #3E5879;
+    text-align: center;
+    text-shadow: 2px 1px #9AA6B2;
+    padding: 4px 6px;
+    margin: 20px;
+}
+
+#left-side{
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    font-size: 1.2rem;
+    margin: 8px;
+    color: #555555; 
+}
+
+input{
+    margin: 8px;
+  border-radius: 20px;
+  outline: none;
+  height: 35px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  border: 1px solid #BCCCDC;
+  padding: 10px 12px;
+}
+
+input:focus{
+    border-color: #00a8cc;
+    box-shadow: 0px 0px 8px rgba(0, 168, 204, 0.5);
+}
+
+#imageFileInput{
+    padding: 8px 5px;
+
+}
+
+#right-side{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+}
+
+
+
+#button {
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+    background-color: #384B70;
+    outline: none;
+    color: wheat;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  #button:hover {
+    background-color: #508C9B;
+    transform: scale(1.03);
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+@media (max-width: 600px){
+    #container{
+        display: flex;
+        flex-direction: column;
+    }
+}
