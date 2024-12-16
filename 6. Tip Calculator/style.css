@@ -1,0 +1,141 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Roboto, sans-serif;
+  background: linear-gradient(to left, #025651, #001e2c);
+}
+
+#container {
+  border-radius: 20px;
+  background-color: lightblue;
+  box-shadow: 10px 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  line-height: 2rem;
+}
+
+#field {
+  margin: 10px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+h1 {
+  background-color: #1f7a8c;
+  color: wheat;
+  text-align: center;
+  padding: 10px 2px;
+  margin-bottom: 2rem;
+  text-shadow: 2px 1px #1f1c18;
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #004643;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  outline: none;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+  border: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #1f7a8c;
+  box-shadow: 0px 4px 8px rgba(0, 31, 44, 0.2);
+}
+
+#button {
+  width: 100%;
+  max-width: 200px;
+  height: 50px;
+  background-color: #1f7a8c;
+  outline: none;
+  color: wheat;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+#button:hover {
+  background-color: #3fbac2;
+  transform: scale(1.03);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px 12px;
+  font-size: 1.2rem;
+  color: #002a34;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bill-alert,
+#people-alert,
+#dropdown-alert {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #002a34;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 600px) {
+  #container {
+    padding: 15px;
+    line-height: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  #button {
+    max-width: 150px;
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+  }
+
+  #result {
+    font-size: 1rem;
+  }
+}

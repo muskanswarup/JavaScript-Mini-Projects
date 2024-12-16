@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>Tip Calculator</h1>
+
+      <form id="tip-form">
+        <fieldset id="field">
+          <legend>Bills details:</legend>
+
+          <label for="bill">How much was the bill?</label>
+          <span>$</span>
+          <input
+            type="text"
+            id="bill"
+            placeholder="Enter bill amount"
+            required
+          />
+          <p id="bill-alert"></p>
+
+          <label for="service">How was your service?</label>
+          <select name="service" id="service">
+            <option value="">Choose option</option>
+            <option value="0.3">30% - It was outstanding</option>
+            <option value="0.2">20% - It was good</option>
+            <option value="0.15">15% - It was ok :|</option>
+            <option value="0.01">10% - It was bad</option>
+            <option value="0.05">5% - It was awful!</option>
+          </select>
+          <p id="dropdown-alert"></p>
+
+
+          <label for="people">How many people are sharing the bill?</label>
+          <input
+            type="text"
+            placeholder="Enter the number of people"
+            id="people"
+            min="1"
+            required
+          />
+          <p id="people-alert"></p>
+        </fieldset>
+        <button type="button" id="button">Calculate</button>
+      </form>
+      <div id="result" aria-live="polite"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
