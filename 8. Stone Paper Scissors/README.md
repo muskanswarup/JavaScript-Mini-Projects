@@ -34,13 +34,14 @@ To run the game locally:
 
 ## Deployed Link
 
-Play the game online: [Rock Paper Scissors Game](https://rock-paper-scissors-fawn-eight.vercel.app/)
+Play the game online:
+[Rock Paper Scissors Game](https://rock-paper-scissors-bice-kappa-85.vercel.app/)
 
 
 ## Screenshots
 
-Game Interface
-![Rock-paper-scissors](https://github.com/user-attachments/assets/25ad5361-4d76-489c-85ac-4f1bd90e54ee)
+![Rock_paper_scissors](https://github.com/user-attachments/assets/78d85f6e-1fbc-474f-b19a-1279e1434ce9)
+
 
 
 ## License
