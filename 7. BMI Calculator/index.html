@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator!</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1>BMI Calculator</h1>
+      <div id="buttons-wrapper">
+        <button class="tablink" id="US_units_btn">US units</button>
+        <button class="tablink" id="metric_units_btn">Metric units</button>
+      </div>
+
+      <div id="box">
+        <!-- Content for us units -->
+        <div class="tab-content" id="US_units">
+          <label for="age">Age : </label>
+          <span><em> Ages 2-120</em></span>
+
+          <input type="text" id="ageUS" />
+          <p class="age-alert"></p>
+
+          <div id="gender-div">
+            <label for="gender" id="heading">Gender : </label>
+            <div id="gender-options">
+              <div class="gender-block">
+                <input type="radio" id="gender1" name="gender" value="male"/>
+                <label for="gender" id="gender1">Male</label>
+              </div>
+              <div class="gender-block">
+                <input type="radio" id="gender2" name="gender" value="female"/>
+              <label for="gender" id="gender2">Female</label>
+              </div>
+            </div>
+            <p class="gender-alert"></p>
+          </div>
+
+          <label for="height">Height : </label>
+          <div>
+            <input type="text" placeholder="feet" class="height-input" id="heightUSFeet"/>
+            <input type="text" placeholder="inches" class="height-input" id="heightUSInches" />
+          </div>
+          <p class="height-alert"></p>
+
+          <label for="weight">Weight : </label>
+          <input type="text" placeholder="pounds" id="weightUS"/>
+          <p class="weight-alert"></p>
+        </div>
+
+        <!-- Content for metric units -->
+        <div class="tab-content" id="Metric_units">
+          <label for="age">Age : </label>
+          <span><em> Ages 2-120</em></span>
+          <input type="text" id="ageMetric" />
+          <p class="age-alert-metric"></p>
+
+          <div id="gender-div">
+            <label for="gender-metric" id="heading">Gender : </label>
+            <div id="gender-options">
+              <div class="gender-block">
+                <input type="radio" id="gender1_metric" name="gender-metric" value="male"/>
+                <label for="gender1_metric">Male</label>
+              </div>
+              <div class="gender-block">
+                <input type="radio" id="gender2_metric" name="gender-metric" value="female" />
+                <label for="gender2_metric">Female</label>
+              </div>
+            </div>
+            <p class="gender-alert-metric"></p>
+          </div>
+
+          <label for="height">Height : </label>
+          <input type="text" placeholder="cm" id="heightMetric"/>
+          <p class="height-alert-metric"></p>
+
+          <label for="weight">Weight : </label>
+          <input type="text" placeholder="kg" id="weightMetric" />
+          <p class="weight-alert-metric"></p>
+
+        </div>
+      </div>
+      <div id="buttons-wrapper">
+        <button type="button" class="buttons" id="calculate">Calculate</button>
+        <button type="reset" class="buttons" id="reset">Clear</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

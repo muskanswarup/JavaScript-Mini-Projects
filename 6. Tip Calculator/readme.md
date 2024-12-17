@@ -9,7 +9,7 @@ A responsive Tip Calculator web application that allows users to calculate the t
 - **Responsive Design**: Adapts seamlessly to different screen sizes, making it accessible on desktops, tablets, and mobile devices.
 - **Error Handling**: Alerts users with appropriate messages when invalid inputs are provided (e.g., missing values, zero bill, etc.).
 
-## Tech Stack 🛠
+## Tech Stack 
 
 - **HTML**: Structuring the web page.
 - **CSS**: Styling the application with responsive design principles.
