@@ -1,0 +1,128 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(./images/bg-image.avif);
+  object-fit: cover;
+  color: wheat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+h1 {
+  text-align: center;
+  padding: 10px 32px;
+  text-shadow: 1px 2px black;
+}
+
+#search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-bar {
+  width: 60%;
+  height: 35px;
+  border: 1px solid wheat;
+  border-radius: 20px;
+  margin: 10px;
+  /* margin-left: 40px; */
+  /* margin-right: 20px; */
+  outline: none;
+  padding: 20px 12px;
+}
+
+input::placeholder {
+  font-size: 1rem;
+  /* padding: 5px; */
+  font-weight: bold;
+  opacity: 0.5;
+  color: red;
+}
+
+.fa-search {
+  font-size: 1.5rem;
+  padding: 1px 2px;
+  text-shadow: 1px 2px black;
+  cursor: pointer;
+}
+
+#tags {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag-name {
+  font-weight: bold;
+  font-size: 1rem;
+  width: full;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ff7f7f;
+  padding: 12px 15px;
+  border: none;
+  color: wheat;
+  text-shadow: 1px 2px black;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #ED649F;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card{
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.card-image{
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+.card h3 {
+  margin: 10px 0;
+  padding: 5px 7px;
+  font-size: 1.2rem;
+  color: wheat;
+  text-shadow: 1px 2px black;
+  text-align: center;
+}
+
+.card p {
+  padding: 0 10px 10px;
+  font-size: 0.9rem;
+  /* color: #ff7f7f; */
+  color: black;
+  text-align: justify;
+}
