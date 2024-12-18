@@ -49,6 +49,11 @@ body,
   justify-content: space-between;
 }
 
+#score-text, #high-score-text{
+ 
+
+}
+
 #main-heading {
   margin-top: 20px;
   padding: 8px 10px;
@@ -89,24 +94,24 @@ button {
 
 #instruction-text {
   position: absolute;
-  top: 76%;
+  top: 70%;
   color: #333;
-  width: 350px;
+  width: 300px;
   text-align: center;
   text-transform: capitalize;
   /* padding: 30px; */
   margin-top: 10px;
-  margin-left: 50px;
+  margin-left: 100px;
   z-index: 10;
 }
 
 #logo {
   position: absolute;
-  top: 60%; /* Center vertically */
+  top: 52%; /* Center vertically */
   left: 50%; /* Center horizontally */
   transform: translate(-50%, -50%); /* Shift the logo to the center */
   z-index: 1;
-  width: 350px;
+  width: 300px;
 }
 
 .snake {
