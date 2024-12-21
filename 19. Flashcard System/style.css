@@ -1,0 +1,194 @@
+@font-face {
+  font-family: "MyCustomFont";
+  src: url("./fonts/nunito.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; 
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "nunito", sans-serif;
+  color: black;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-image: url(./bg-image.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  box-sizing: border-box;
+}
+
+#container {
+  margin: 20px 15px;
+  padding: 20px 32px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid whitesmoke;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3 ease;
+  padding: 10px 12px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#add-card-btn {
+  top: 0;
+  left: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#top-btns{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+button {
+  width: 80%;
+  max-width: 200px;
+  background-color: #00b295;
+  color: white;
+  padding: 12px 26px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+  margin-bottom: 15px;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #05c8be;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.question {
+  font-size: 1.2rem;
+  color: black;
+  text-shadow: 1px 2px wheat;
+}
+
+.answer {
+  font-size: 0.9rem;
+  padding: 10px 12px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  width: 400px;
+  max-width: 90%;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.modal input, .modal textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.modal p  label{
+  font-size: 1rem;
+  text-align: left;
+}
+
+
+.modal input:focus, .modal textarea:focus {
+  border-color: #007BFF;
+  outline: none;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.modal textarea {
+  resize: none;
+}
+#modal-btn {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between; 
+  gap: 10px; 
+}
+
+#modal-btn button {
+  flex: 1; 
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#modal-btn button:hover {
+  background-color: #0056b3;
+}
+
+#modal-btn button:last-child {
+  background-color: #FF4C4C;
+}
+
+#modal-btn button:last-child:hover {
+  background-color: #cc0000;
+}
+
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}

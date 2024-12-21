@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="add-card-btn">
+        <button>Add Flashcard</button>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <p class="question">What is an algorithm?</p>
+          <button class="show-hide-btn">Show Answer</button>
+          <p class="answer">
+            An algorithm is a step-by-step procedure or formula for solving a
+            problem or performing a task.
+          </p>
+        </div>
+        <div class="card">
+          <p class="question">What is a data structure?</p>
+          <button class="show-hide-btn">Show Answer</button>
+          <p class="answer">
+            A data structure is a way of organizing and storing data in a
+            computer so it can be accessed and modified efficiently.
+          </p>
+        </div>
+        <div class="card">
+          <p class="question">
+            What is the difference between a compiler and an interpreter
+          </p>
+          <button class="show-hide-btn">Show Answer</button>
+          <p class="answer">
+            A compiler translates the entire program into machine code before
+            execution, while an interpreter translates and executes code
+            line-by-line.
+          </p>
+        </div>
+        <div class="card">
+          <p class="question">What is the purpose of an operating system??</p>
+          <button class="show-hide-btn">Show Answer</button>
+          <p class="answer">
+            An operating system manages hardware and software resources and
+            provides common services for computer programs.
+          </p>
+        </div>
+        <div class="card">
+          <p class="question">What is recursion in programming?</p>
+          <button class="show-hide-btn">Show Answer</button>
+          <p class="answer">
+            Recursion is a programming technique where a function calls itself
+            to solve smaller instances of a problem.
+          </p>
+        </div>
+        <div class="card">
+          <p class="question">What is a database?</p>
+          <button class="show-hide-btn">Show Answer</button>
+          <p class="answer">
+            A database is an organized collection of data that can be easily
+            accessed, managed, and updated.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="flashcard-box">
+      <p><label for="add-question">Question : </label></p>
+      <input type="text" id="add-question" placeholder="Question?" />
+
+      <p><label for="add-answer">Answer : </label></p>
+      <textarea
+        id="add-answer"
+        placeholder="Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam obcaecati incidunt labore voluptas laudantium voluptatum exercitationem molestiae "
+        rows="5"
+        cols="60"
+      ></textarea>
+      <span id="modal-btn">
+        <button id="save-modal">Save</button>
+        <button id="delete-modal">Delete</button>
+      </span>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- <i class="fas fa-search"></i> -->
