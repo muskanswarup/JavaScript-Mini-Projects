@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="modal "></div>
+    <div class="game-buttons">
+      <h1>Hangman Game</h1>
+      <button id="start-btn">Start</button>
+      <button id="pause-btn">Pause</button>
+      <button id="restart-btn">Restart</button>
+    </div>
+    <div id="container">
+      <div id="hangman-box">
+        <div id="canvas"></div>
+        <div class="timer">
+          Time left:
+          <span id="timer-display">00 : 00</span>
+        </div>
+      </div>
+      <div id="game-box">
+        <ul id="word-display">   
+        </ul>
+        <div >
+          <span
+            >Hint :
+            <b id="hint-text"
+              >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
+              animi vel. Consequatur ipsum at officiis voluptate</b
+            >
+          </span>
+        </div>
+        <div >Incorrect guesses : <b id="guesses-text">0/6</b></div>
+        <div id="keyboard"></div>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+    <script src="wordList.js"></script>
+  </body>
+</html>
