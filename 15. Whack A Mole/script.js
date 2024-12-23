@@ -1,82 +1,139 @@
+const startBtn = document.getElementById("start-btn");
+const pauseBtn = document.getElementById("pause-btn");
+const restartBtn = document.getElementById("restart-btn");
+const closeModalBtn = document.getElementById("close-modal-btn");
+const modal = document.getElementById("game-over-modal");
+const finalScoreEl = document.getElementById("final-score");
+const board = document.getElementById("board");
+const timerEl = document.getElementById("countdown-timer");
+const scoreEl = document.getElementById("score");
+
 let currentMoleTile;
 let currentPotatoTile;
 let score = 0;
 let gameOver = false;
+let gameIntervalMole;
+let gameIntervalPotato;
+let timer;
+let timeLeft = 30;
 
-window.onload = function(){
-    setGame();
-}
+function setGame() {
+    board.innerHTML = ""; // Clear board
 
-function setGame(){
-    // Set yp 9X9 grid.
-    for(let i = 0; i < 9; i++){
-        let tile = document.createElement("div");
+    for (let i = 0; i < 9; i++) {
+        const tile = document.createElement("div");
         tile.id = i.toString();
-        tile.addEventListener("click" , selectTile);
-        document.getElementById("board").appendChild(tile);
+        tile.addEventListener("click", selectTile);
+        board.appendChild(tile);
     }
-
-    setInterval(setMole, 2000);
-    setInterval(setPotato, 3000);
 }
 
+function startGame() {
+    if (gameOver) resetGame();
 
-function getRandomTile(){
-    let num = Math.floor(Math.random() * 9);
-    return num.toString();
+    gameOver = false;
+    gameIntervalMole = setInterval(setMole, 2000);
+    gameIntervalPotato = setInterval(setPotato, 3000);
+    startTimer();
 }
 
-function setMole(){
+function pauseGame() {
+    clearInterval(gameIntervalMole);
+    clearInterval(gameIntervalPotato);
+    clearInterval(timer);
+}
 
-    if(gameOver)    return;
+function resetGame() {
+    pauseGame();
+    timeLeft = 30;
+    timerEl.innerText = "00 : 30";
+    score = 0;
+    scoreEl.innerText = "Score: 0";
+    gameOver = false;
+    setGame();
+    hideModal();
+}
 
-    if(currentMoleTile){
-        currentMoleTile.innerHTML ="";
-    }
+function startTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+        if (timeLeft <= 0) {
+            clearInterval(timer);
+            endGame();
+        } else {
+            timeLeft--;
+            timerEl.innerText = `00 : ${timeLeft.toString().padStart(2, "0")}`;
+        }
+    }, 1000);
+}
 
-    let mole = document.createElement("img");
-    mole.src = "./Images/mole2.png";
+function getRandomTile() {
+    return Math.floor(Math.random() * 9).toString();
+}
 
-    let num = getRandomTile();
+function setMole() {
+    if (gameOver) return;
 
-   if(currentPotatoTile && (currentPotatoTile.id) == num){
-    return;
-   }
+    if (currentMoleTile) currentMoleTile.innerHTML = ""; // Clear previous mole
+
+    const num = getRandomTile();
+
+    if (currentPotatoTile && currentPotatoTile.id === num) return; // Avoid overlap
 
     currentMoleTile = document.getElementById(num);
+    const mole = document.createElement("img");
+    mole.src = "./Images/mole2.png";
+    mole.alt = "Mole";
     currentMoleTile.appendChild(mole);
 }
 
-function setPotato(){
+function setPotato() {
+    if (gameOver) return;
 
-    if(gameOver) return;
+    if (currentPotatoTile) currentPotatoTile.innerHTML = ""; // Clear previous potato
 
-    if(currentPotatoTile){
-        currentPotatoTile.innerHTML = "";
-    }
+    const num = getRandomTile();
 
-    let potato = document.createElement("img");
-    potato.src = "./Images/potato.png";
-
-    let num = getRandomTile();
-
-    if(currentMoleTile && currentMoleTile.id == num){
-        return;
-    }
+    if (currentMoleTile && currentMoleTile.id === num) return; // Avoid overlap
 
     currentPotatoTile = document.getElementById(num);
+    const potato = document.createElement("img");
+    potato.src = "./Images/potato.png";
+    potato.alt = "Potato";
     currentPotatoTile.appendChild(potato);
 }
 
-function selectTile(){
+function selectTile() {
+    if (gameOver) return;
 
-    if(gameOver) return;
-
-    if(this == currentMoleTile){
+    if (this === currentMoleTile) {
         score += 10;
-        document.getElementById("score").innerText = score.toString();
-    }else if(this == currentPotatoTile){
-        document.getElementById("score").innerText = "GAME OVER! " + score.toString();
-        gameOver = true;
+        scoreEl.innerText = `Score: ${score}`;
+        currentMoleTile.innerHTML = "";
+        currentMoleTile = null;
+    } else if (this === currentPotatoTile) {
+        endGame();
     }
 }
+
+function endGame() {
+    gameOver = true;
+    pauseGame();
+    showModal();
+}
+
+function showModal() {
+    finalScoreEl.innerText = `Your Score: ${score}`;
+    modal.classList.remove("hidden");
+}
+
+function hideModal() {
+    modal.classList.add("hidden");
+}
+
+startBtn.addEventListener("click", startGame);
+pauseBtn.addEventListener("click", pauseGame);
+restartBtn.addEventListener("click", resetGame);
+closeModalBtn.addEventListener("click", hideModal);
+
+window.onload = setGame;

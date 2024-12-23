@@ -1,22 +1,33 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8"></meta>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-        <title>What a Mole!</title>
-        <link rel="stylesheet" href="style.css"></link>
-        <!--Links to add font-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack a Mole!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="sedan-regular">
+    <h1>Whack a Mole!</h1>
+    <div id="buttons">
+        <button id="start-btn">Start Game</button>
+        <button id="pause-btn">Pause Game</button>
+        <button id="restart-btn">Restart Game</button>
+    </div>
+    <span id="countdown-timer">00 : 30</span>
+    <span id="score">Score: 0</span>
+    <div id="board"></div>
 
-        <script src="script.js"></script>
-    </head>
-
-    <body class="sedan-regular">
-        <h1>Whack a Mole!?</h1>
-        <h2 id="score">0</h2>
-        <div id="board"></div>
-    </body>
-
+    <!-- Modal -->
+    <div id="game-over-modal" class="modal hidden">
+        <div class="modal-content">
+            <h2>GAME OVER</h2>
+            <p id="final-score">Your Score: 0</p>
+            <button id="close-modal-btn">Close</button>
+        </div>
+    </div>
+</body>
 </html>
