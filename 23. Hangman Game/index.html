@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="modal "></div>
+    <div id="game-over-modal" class="modal hidden">
+      <div class="modal-content">
+          <h2>GAME OVER</h2>
+          <p id="final-score">Your Score: 0</p>
+          <button id="close-modal-btn">Close</button>
+      </div>
+  </div>
+
     <div class="game-buttons">
       <h1>Hangman Game</h1>
       <button id="start-btn">Start</button>
@@ -16,7 +23,8 @@
     </div>
     <div id="container">
       <div id="hangman-box">
-        <div id="canvas"></div>
+        <canvas id="canvas" width="300" height="300"></canvas>
+
         <div class="timer">
           Time left:
           <span id="timer-display">00 : 00</span>
